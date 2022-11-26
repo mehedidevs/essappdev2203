@@ -11,14 +11,14 @@ import com.cit.k_nested_nav.databinding.FragmentHomeBinding
 
 
 class HomeFragment : Fragment() {
-    lateinit var binding: FragmentHome2Binding
+    private lateinit var binding: FragmentHome2Binding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
 
-        var bundle = Bundle()
+        val bundle = Bundle()
 
 
         binding = FragmentHome2Binding.inflate(layoutInflater, container, false)
