@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.cit.k_nested_nav.HomeFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" >
+        <action
+            android:id="@+id/action_homeFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_nested1Fragment"
+            app:destination="@id/navigation" />
+        <action
+            android:id="@+id/action_homeFragment_to_nested2Fragment"
+            app:destination="@id/navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.cit.k_nested_nav.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" />
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/nested1Fragment">
+        <fragment
+            android:id="@+id/nested2Fragment"
+            android:name="com.cit.k_nested_nav.Nested2Fragment"
+            android:label="fragment_nested2"
+            tools:layout="@layout/fragment_nested2" />
+        <fragment
+            android:id="@+id/nested1Fragment"
+            android:name="com.cit.k_nested_nav.Nested1Fragment"
+            android:label="fragment_nested1"
+            tools:layout="@layout/fragment_nested1" />
+    </navigation>
+</navigation>
